@@ -17,11 +17,11 @@ module YARD
 
         return unless (
           (n.type == :int && n.source =~ /^[1-9]\d*$/) ||
-          (n.type == :var_ref && n.source == 'n') ||
+          (n.type == :vcall && n.source == 'n') ||
           (n.type == :dot2 && (
             (n[0].type == :int && n[0].source =~ /^[0-9]\d*$/) || (
               (n[1].type == :int && n[1].source =~ /^[1-9]\d*$/) ||
-              (n[1].type == :var_ref && n[1].source == 'n')
+              (n[1].type == :vcall && n[1].source == 'n')
             )
           ))
         )
